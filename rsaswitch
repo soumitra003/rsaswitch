@@ -1,0 +1,7 @@
+#!/bin/sh
+
+SSH_PATH="${HOME}/.ssh"
+KEY=${1:-default}
+
+ln -Ffshv ${SSH_PATH}/id_rsa_${KEY} ${SSH_PATH}/id_rsa
+ln -Ffshv ${SSH_PATH}/id_rsa_${KEY}.pub ${SSH_PATH}/id_rsa.pub
